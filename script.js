@@ -9,6 +9,7 @@ let res =1;
     }
    console.log( func1_1(3));
 }
+func1();
 function func2() {
     function func2_1(fib){
 
@@ -34,7 +35,7 @@ str_res+=res.toString() + ' ';
 console.log(func2_1(fib));
 
 }
-
+func2();
 function func3() {
     function func3_1(){
 
@@ -56,6 +57,7 @@ function func3() {
     let str = 'iskat taksi';
    console.log(func3_1(str));
 }
+func3();
 function func4() {
     function func4_1(str1,str2){
         let flag = true;
@@ -82,7 +84,7 @@ function func4() {
     let str2 = 'rano';
    console.log( func4_1(str1,str2));
 }
-
+func4();
 function func5() {
     function func5_1(){
 
@@ -95,6 +97,7 @@ function func5() {
     let date2 = new Date(2021, 5, 1);
    console.log( func5_1(date1,date2));
 }
+func5();
 function func6() {
     function func6_1(num){
 
@@ -109,6 +112,7 @@ function func6() {
     let num = 123303;
     console.log(func6_1(num));
 }
+func6();
 function func7() {
     function func7_1(num) {
         let n = 5;
@@ -123,6 +127,7 @@ function func7() {
     console.log(func7_1(num));
 
 }
+func7();
 function func8() {
     function func8_1(arr) {
         let count = 0;
@@ -143,6 +148,7 @@ function func8() {
     let arr = [1, -2, -3, -4, 5, 6, -6, 8];
    console.log( func8_1(arr));
 }
+func8();
 function func9() {
 function func9_1(arr) {
     let i;
@@ -164,7 +170,7 @@ function func9_1(arr) {
 
 
 }
-
+func9();
 function func10() {
 function func10_1(arr) {
     let i;
@@ -186,7 +192,7 @@ function func10_1(arr) {
    console.log( func10_1(arr));
 
 }
-
+func10();
 function func11() {
 function func11_1(arr) {
 let res='';
@@ -198,6 +204,7 @@ let res='';
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     console.log(func11_1(arr));
 }
+func11();
 function func12() {
     let res = '';
     for (let j = 1; j < 10; j++) {
@@ -208,6 +215,7 @@ function func12() {
         res = '';
     }
 }
+func12();
 function func13() {
 function func13_1(arr) {
     let res = 0;
@@ -223,6 +231,7 @@ function func13_1(arr) {
     let arr = [[1, 2, 3, 6, 7, 8], [4, 5, 1, 6, 8], [6, 2, 4]];
     console.log(func13_1(arr));
 }
+func13();
 function func14() {
 
     let sum = 0;
@@ -245,6 +254,7 @@ function func14() {
    return cons;
 
 }
+func14();
 function func15() {
 function func15_1(str) {
     let str_new = '';
@@ -267,7 +277,7 @@ function func15_1(str) {
    console.log( func15_1(str));
 
 }
-
+func15();
 function func16() {
 function func16_1(num) {
     let sum = 0;
@@ -290,5 +300,5 @@ return str;
     console.log(func16_1(num));
 
 }
-func16()
+func16();
 
