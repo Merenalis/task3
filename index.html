@@ -6,7 +6,7 @@
 </head>
 <body>
 <form name="search">
-    <textarea rows="7" cols="40" name="message" class="textarea"></textarea>
+    <textarea rows="7" cols="40" name="message" id="textarea" class="textarea" oninput="func_global()"></textarea>
 </form>
 <div class="print-global">
     Result:
@@ -16,32 +16,26 @@
 </div>
 
 <script>
-    let message = document.search.message;
-    let re1 = /[a-z]/;
-    let re2 = /[A-Z]/;
-    let re3 = /[0-9]/;
-    let res_tmp;
-
-    function onkeypress(e) {
+    function func_global() {
+        let text = document.getElementById('textarea').value;
         let printBlock = document.getElementById("print-global__print");
-        let val = String.fromCharCode(e.keyCode);
-        if (val.match(re1)!=null||val.match(re2)!=null||val.match(re3)!=null){
-            res_tmp = val.match(re1)||val.match(re2)||val.match(re3);
-            printBlock.textContent += res_tmp;
+        printBlock.textContent = '';
+        printBlock.textContent += func(text);
+
+        function func(text) {
+            let result,result_tmp = '';
+            for (let i = 0; i < text.length; i++) {
+                if (text[i - 1] === '_') {
+                    result_tmp += text[i].toUpperCase();
+                } else
+                    result_tmp += text[i]
+            }
+            result = result_tmp.replace(new RegExp('[_]', 'g'), '')
+            return result;
         }
     }
 
-    function onkeydown(e) {
-        if (e.key === 'Backspace') {
 
-            let printBlock = document.getElementById("print-global__print"),
-                length = printBlock.textContent.length;
-            printBlock.textContent = printBlock.textContent.substring(0, length - 1);
-        }
-    }
-
-    message.addEventListener("keypress", onkeypress);
-    message.addEventListener("keydown", onkeydown);
 </script>
 </body>
 </html>
