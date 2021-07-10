@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="main.css">
+
 </head>
 <body>
 <form name="search">
-    <textarea rows="7" cols="40" name="message" id="textarea" class="textarea" oninput="func_global()"></textarea>
+    <textarea rows="7" cols="40" name="message" id="textarea" class="textarea"></textarea>
 </form>
 <div class="print-global">
     Result:
@@ -14,31 +14,5 @@
 
     </div>
 </div>
-
-<script>
-
-    function func_global() {
-        let text = document.getElementById('textarea').value;
-        let printBlock = document.getElementById("print-global__print");
-        printBlock.textContent = '';
-        printBlock.textContent += func(text);
-
-        function func(text) {
-            let result, result_tmp = '';
-            result_tmp = text.replace(new RegExp('([^a-zа-я])([^_]+)', 'gi'), (match, match2, match3) => {
-
-                match3 = match3[0].toUpperCase() + match3.slice(1);
-                return match2 + match3
-            });
-            result = result_tmp.replace(new RegExp('[_]', 'g'), '')
-
-            return result;
-
-
-        }
-    }
-
-
-</script>
 </body>
 </html>
