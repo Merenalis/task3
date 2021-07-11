@@ -1,11 +1,11 @@
-/*
-el=document.getElementById('textarea');
-el.addEventListener('input',func_global);
+
+/*el=document.getElementById('textarea');
+el.addEventListener('input',func_global);*/
 function func_global(test_text) {
-    let text = document.getElementById('textarea').value;
+ /*   let text = document.getElementById('textarea').value;
     let printBlock = document.getElementById("print-global__print");
     printBlock.textContent = '';
-    printBlock.textContent += func(text);
+    printBlock.textContent += func(text);*/
 
     function func(text) {
         let result, result_tmp = '';
@@ -19,4 +19,7 @@ function func_global(test_text) {
         return result;
 
 
-    }}*/
+    }
+    return func(test_text);
+}
+module.exports = func_global;
