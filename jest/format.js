@@ -1,4 +1,4 @@
-function format(text) {
+function func(text) {
     let result, result_tmp = '';
     result_tmp = text.replace(new RegExp('([^a-zа-я])([^_]+)', 'gi'), (match, match2, match3) => {
 
@@ -11,4 +11,4 @@ function format(text) {
 
 
 }
-module.exports=format;
+module.exports=func;
