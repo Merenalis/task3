@@ -243,7 +243,7 @@ function func14() {
 
 }
 func14();*/
-function func15() {
+/*function func15() {
 function func15_1(str) {
     let str_new = '';
     for (let i = 0; i < str.length; i++) {
@@ -264,7 +264,7 @@ function func15_1(str) {
     let str = "var_text_hello";
    console.log( func15_1(str));
 
-}
+}*/
 //func15();
 
 
