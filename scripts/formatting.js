@@ -5,8 +5,7 @@ el.addEventListener('input', func_global);
 function func_global() {
     let text = document.getElementById('textarea').value;
     let printBlock = document.getElementById("print-global__print");
-    printBlock.textContent = '';
 
-    printBlock.textContent += format(text);
+    printBlock.textContent = format(text);
 
 }
